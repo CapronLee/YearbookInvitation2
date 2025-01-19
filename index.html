@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yearbook Invitation</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+  <div class="w-full max-w-md p-6 bg-white rounded-lg shadow-lg">
+    <h1 class="text-2xl font-bold text-center mb-4">Buổi Chụp Ảnh Kỷ Yếu</h1>
+    <form id="nameForm" class="space-y-4">
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700">Nhập tên của bạn:</label>
+        <input type="text" id="name" maxlength="30" placeholder="Tên của bạn" 
+               class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+      </div>
+      <button type="submit" 
+              class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition">
+        Xem thiệp mời
+      </button>
+    </form>
+  </div>
+
+  <!-- Modal -->
+  <div id="invitationModal" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center">
+    <div class="relative bg-white p-6 rounded-lg shadow-lg">
+      <button id="closeModal" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700">
+        &times;
+      </button>
+      <div class="relative w-96 h-64"> 
+        <img src="assets/invitation-background.jpg" alt="Invitation Background" 
+             class="absolute inset-0 w-full h-full object-cover rounded-lg">
+        <div id="invitationText" 
+             class="absolute text-white text-xl"
+             style="top: 45%; left: 50%; transform: translate(-50%, -50%); color:rgb(53, 0, 0);">
+          <!-- Tên sẽ được chèn vào đây -->
+        </div>
+      </div>
+      <a id="downloadButton" href="#" download="invitation.png"
+         class="mt-4 block bg-green-500 text-white text-center py-2 rounded-lg hover:bg-green-600 transition">
+        Tải thiệp mời
+      </a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  #invitationModal {
+    display: flex;
+  }
+  
